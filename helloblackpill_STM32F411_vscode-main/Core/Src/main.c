@@ -95,21 +95,15 @@ int main(void)
   {
     for (i = 0; i < 13; i++)
     {
-      // Check if the button on A7 is pressed
     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_7) == GPIO_PIN_RESET) {
-      // Turn on LED connected to B3
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_SET);
     } else {
-      // Turn off LED connected to B3
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, GPIO_PIN_RESET);
     }
 
-    // Check if the button on A1 is pressed
     if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1) == GPIO_PIN_RESET) {
-      // Turn on LED connected to B7
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
     } else {
-      // Turn off LED connected to B7
       HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
     }
     }
